@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+
+ 
+
+    title {
+        font-weight: bold; font-size: 20px;
+    }
+    content {
+        margin: 0; font-size: 17px;
+    }
+</style>
+  </head>
+
+  <body>
+    <div class = "title">
+        EDITANDO:{{page}}
+    </div>
+    <form method="post">
+      <textarea name="content" style="height: 400px; width: 800px;">{{page and page.content or ""}}</textarea>
+      <div>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </body>
+
+</html>

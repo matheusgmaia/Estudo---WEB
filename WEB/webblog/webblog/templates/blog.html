@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+    body {
+        font-family: sans-serif; width: 800px; margin: 0 auto; padding: 10px;
+    }
+    label {
+        display: block; font-size: 20px;
+    }
+    hr {
+        margin: 20px auto;
+    }
+
+    .post-title {
+        font-weight: bold; font-size: 20px;
+    }
+    .post-body {
+        margin: 0; font-size: 17px;
+    }
+</style>
+
+
+<html>
+    <head>
+        <title>Blog do palavrão</title>
+    </head>
+    <body>
+		<h1>Blog do palavrão</h1>
+		<hr>
+		{% for post in posts%}
+			<div class="post">
+			<div class="post-title">{{post.title}}</div>
+			<pre class="post-body">{{post.body}}</pre>
+			</div>
+			<br><br>
+    {% endfor %}
+    {{QUERIED}}
+	</body>
+</html>

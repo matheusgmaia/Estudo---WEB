@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Blog do palavrão</title>
+    </head>
+    <body>
+		<h1>Blog do palavrão</h1>
+		<hr>
+		{% for post in posts[0,10] %}
+			<div class="post">
+			<div class="post-title">{{post.title}}</div>
+			<pre class="post-body">{{post.body}}</pre>
+			</div>
+    {% endfor %}
+	</body>
+</html>
